@@ -13,7 +13,7 @@ public class CalculateTimes {
         this.lap1Time = lap1Time;
         this.lap2Time = lap2Time;
 
-        double totalTimeSeconds = lap1Time + lap2Time;
+        double totalTimeSeconds = this.lap1Time + this.lap2Time;
 
         int seconds = (int) totalTimeSeconds % 60;
         int minutes = (int) (totalTimeSeconds / 60) % 60;

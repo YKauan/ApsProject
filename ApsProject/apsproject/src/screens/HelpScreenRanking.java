@@ -59,6 +59,8 @@ public class HelpScreenRanking extends JPanel {
     private int index;
 
     private LanguageManager languageManager;
+
+    private static HelpScreenRanking instance;
     
     private SpringLayout layout;
 
@@ -111,7 +113,7 @@ public class HelpScreenRanking extends JPanel {
             img3.addActionListener(e -> radAction(e, 3));
             nextButton.addActionListener(e -> {Buttons.helpButtonFunctions(e, previousButton, nextButton, index);paintImage();});
             previousButton.addActionListener(e -> {Buttons.helpButtonFunctions(e, previousButton, nextButton, index);paintImage();});
-            exitButton.addActionListener(e -> Buttons.exitButton(e, screen));
+            exitButton.addActionListener(e -> Buttons.exitButtonHR(e, screen));
 
             //=> Definindo o JRadButton img0 como selecionado
             img0.setSelected(true);
@@ -459,6 +461,21 @@ public class HelpScreenRanking extends JPanel {
         this.revalidate();
         this.repaint();
         
+    }
+
+    //=> Metodo responsavel por retornar uma unica instancia da classe HelpScreenRanking para toda a aplicacao.
+    public static HelpScreenRanking getInstance() {
+
+        if (instance == null) {
+            instance = new HelpScreenRanking();
+        }
+        return instance;
+    }
+
+    //=> Metodo responsavel por permitir abrir a tela apos ser fechada
+    public void close() {
+
+        instance = null;
     }
 
 }

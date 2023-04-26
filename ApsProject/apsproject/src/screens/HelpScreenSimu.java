@@ -56,6 +56,8 @@ public class HelpScreenSimu extends JPanel {
     
     private LanguageManager languageManager;
 
+    private static HelpScreenSimu instance;
+
     private SpringLayout layout;
 
     private Styles style;
@@ -107,7 +109,7 @@ public class HelpScreenSimu extends JPanel {
             img3.addActionListener(e -> radAction(e, 3));
             nextButton.addActionListener(e -> {Buttons.helpButtonFunctions(e, previousButton, nextButton, index);paintImage();});
             previousButton.addActionListener(e -> {Buttons.helpButtonFunctions(e, previousButton, nextButton, index);paintImage();});
-            exitButton.addActionListener(e -> Buttons.exitButton(e, screen));
+            exitButton.addActionListener(e -> Buttons.exitButtonHS(e, screen));
 
             //=> Definindo o JRadButton img0 como selecionado
             img0.setSelected(true);
@@ -430,7 +432,21 @@ public class HelpScreenSimu extends JPanel {
         this.repaint();
         this.revalidate();
 
-        
+    }
+
+    //=> Metodo responsavel por retornar uma unica instancia da classe HelpScreenSimu para toda a aplicacao.
+    public static HelpScreenSimu getInstance() {
+
+        if (instance == null) {
+            instance = new HelpScreenSimu();
+        }
+        return instance;
+    }
+
+    //=> Metodo responsavel por permitir abrir a tela apos ser fechada
+    public void close() {
+
+        instance = null;
     }
 
 }

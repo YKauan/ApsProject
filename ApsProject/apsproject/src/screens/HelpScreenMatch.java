@@ -54,6 +54,8 @@ public class HelpScreenMatch extends JPanel {
     private int index;
 
     private LanguageManager languageManager;
+
+    private static HelpScreenMatch instance;
     
     private SpringLayout layout;
 
@@ -106,7 +108,7 @@ public class HelpScreenMatch extends JPanel {
             img3.addActionListener(e -> radAction(e, 3));
             nextButton.addActionListener(e -> {Buttons.helpButtonFunctions(e, previousButton, nextButton, index);paintImage();});
             previousButton.addActionListener(e -> {Buttons.helpButtonFunctions(e, previousButton, nextButton, index);paintImage();});
-            exitButton.addActionListener(e -> Buttons.exitButton(e, screen));
+            exitButton.addActionListener(e -> Buttons.exitButtonHM(e, screen));
 
             //=> Definindo o JRadButton img0 como selecionado
             img0.setSelected(true);
@@ -424,6 +426,21 @@ public class HelpScreenMatch extends JPanel {
         this.repaint();
         this.revalidate();
 
+    }
+
+    //=> Metodo responsavel por retornar uma unica instancia da classe HelpScreenMatch para toda a aplicacao.
+    public static HelpScreenMatch getInstance() {
+
+        if (instance == null) {
+            instance = new HelpScreenMatch();
+        }
+        return instance;
+    }
+
+    //=> Metodo responsavel por permitir abrir a tela apos ser fechada
+    public void close() {
+
+        instance = null;
     }
 
 }
