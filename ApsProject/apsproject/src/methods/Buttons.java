@@ -46,6 +46,27 @@ public class Buttons {
 
     }
 
+    //=> Metodo responsavel pelo botao sair da classe HelpScreenMatch
+    static public void exitButtonHM(ActionEvent e, JFrame exitScreen) {
+        exitScreen.dispose();
+        HelpScreenMatch.getInstance().close();
+
+    }
+
+    //=> Metodo responsavel pelo botao sair da classe HelpScreenRanking
+    static public void exitButtonHR(ActionEvent e, JFrame exitScreen) {
+        exitScreen.dispose();
+        HelpScreenRanking.getInstance().close();
+
+    }
+
+    //=> Metodo responsavel pelo botao sair da classe HelpScreenSimu
+    static public void exitButtonHS(ActionEvent e, JFrame exitScreen) {
+        exitScreen.dispose();
+        HelpScreenSimu.getInstance().close();
+
+    }
+
     //=> Metodo responsavel por instanciar a minha tela start
     static public void startButton(ActionEvent e, JFrame thisScreen) {
         StartScreen startScreen = new StartScreen(thisScreen);
@@ -75,9 +96,9 @@ public class Buttons {
     }
 
     //=> Metodo responsavel por instanciar a minha tela help
-    static public void helpButton(ActionEvent e) {
+    static public void helpButtonRank(ActionEvent e) {
 
-        HelpScreenRanking helpScreen = new HelpScreenRanking();
+        HelpScreenRanking helpScreen = HelpScreenRanking.getInstance();
 
         //=> Se a minha tela tiver sido instanciada eu seto o meu count como 0;
         if(helpScreen != null){
@@ -91,7 +112,7 @@ public class Buttons {
     //=> Metodo responsavel por instanciar a minha tela help
     static public void helpButtonMatch(ActionEvent e) {
 
-        HelpScreenMatch helpScreenMatch = new HelpScreenMatch();
+        HelpScreenMatch helpScreenMatch = HelpScreenMatch.getInstance();
 
         //=> Se a minha tela tiver sido instanciada eu seto o meu count como 0;
         if(helpScreenMatch != null){
@@ -105,7 +126,7 @@ public class Buttons {
     //=> Metodo responsavel por instanciar a minha tela help
     static public void helpButtonSimu(ActionEvent e) {
 
-        HelpScreenSimu helpScreenSimu = new HelpScreenSimu();
+        HelpScreenSimu helpScreenSimu = HelpScreenSimu.getInstance();
 
         //=> Se a minha tela tiver sido instanciada eu seto o meu count como 0;
         if(helpScreenSimu != null){

@@ -242,7 +242,7 @@ public class RankingScreen {
             typeOfRace.addActionListener(e -> comboAction(e));
             raceRadButton.addActionListener(e -> radAction(e));
             lastButton.addActionListener(e -> lastRaces.showLastRaces(screen));
-            helpButton.addActionListener(e -> Buttons.helpButton(e));
+            helpButton.addActionListener(e -> Buttons.helpButtonRank(e));
             searchButton.addActionListener(e -> {Buttons.searchButton(e, (String) typeOfRace.getSelectedItem(), codRace, player, equip, lap1, lap2, total);searchAction(e);});
             matchButton.addActionListener(e -> Buttons.matchButton(e, screen));
             simuButton.addActionListener(e -> Buttons.simulationButton(e, screen));

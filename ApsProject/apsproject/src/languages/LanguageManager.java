@@ -18,7 +18,7 @@ public class LanguageManager {
 
     }
 
-    //=> Metodo responsaver por retornar uma unica instancia da classe LanguageManager para toda a aplicacao.
+    //=> Metodo responsavel por retornar uma unica instancia da classe LanguageManager para toda a aplicacao.
     public static LanguageManager getInstance() {
         if (instance == null) {
             instance = new LanguageManager();
