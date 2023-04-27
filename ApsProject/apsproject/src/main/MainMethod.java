@@ -2,6 +2,7 @@ package apsproject.src.main;
 
 import javax.swing.SwingUtilities;
 
+import apsproject.src.methods.BlockKeys;
 import apsproject.src.screens.MainScreen;
 
 public class MainMethod {
@@ -13,6 +14,9 @@ public class MainMethod {
     
             //=> Instanciando minha tela principal.
             MainScreen main = new MainScreen();
+
+            //=> Bloqueando a captura de tela
+            BlockKeys.blockPrints();
      
         });
 

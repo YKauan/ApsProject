@@ -343,7 +343,6 @@ public class SimulationScreen {
                 layout.putConstraint(SpringLayout.NORTH , lap2Time[i]         , lap2Lines[i]          , SpringLayout.NORTH  , rightPanel);
                 layout.putConstraint(SpringLayout.WEST  , totalTime[i]        , totalColuns[i]        , SpringLayout.WEST   , rightPanel);
                 layout.putConstraint(SpringLayout.NORTH , totalTime[i]        , totalLines[i]         , SpringLayout.NORTH  , rightPanel);
-
                
             }
             

@@ -5,6 +5,7 @@ import javax.swing.SwingUtilities;
 
 import apsproject.src.methods.BlockKeys;
 
+
 public class Screen extends JFrame{
 
     public Screen(int type){
@@ -18,10 +19,9 @@ public class Screen extends JFrame{
                 this.setUndecorated(true); //=> Retiro a barra de titulo
                 this.setBounds(0, 0, 1250, 600); //=> Defino o tamanho como 1250 x 600 pixels
                 this.setLocationRelativeTo(null); //=> Centralizo o JFrame no centro da tela
-                this.addKeyListener(new BlockKeys());
                 this.setResizable(false); //=> Retiro o redimensionamento da tela
                 this.setVisible(true); //=> Defino a tela como visivel
-
+            
             } else {
 
                 //=> Definindo as propiedades padrao para as minhas telas
@@ -33,7 +33,10 @@ public class Screen extends JFrame{
 
             }
 
+
         });
     }
+
+   
 
 }

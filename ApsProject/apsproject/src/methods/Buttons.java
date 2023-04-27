@@ -43,7 +43,6 @@ public class Buttons {
     //=> Metodo responsavel pelo botao sair
     static public void exitButton(ActionEvent e, JFrame exitScreen) {
         exitScreen.dispose();
-
     }
 
     //=> Metodo responsavel pelo botao sair da classe HelpScreenMatch
