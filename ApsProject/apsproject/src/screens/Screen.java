@@ -3,9 +3,6 @@ package apsproject.src.screens;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
-import apsproject.src.methods.BlockKeys;
-
-
 public class Screen extends JFrame{
 
     public Screen(int type){
