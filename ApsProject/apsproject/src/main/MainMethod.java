@@ -12,8 +12,7 @@ public class MainMethod {
         //=> Uso o SwingUtilities para que minha GUI seja criada na thread de eventos (EDT)
         SwingUtilities.invokeLater(() -> {
     
-            //=> Instanciando minha tela principal.
-            MainScreen main = new MainScreen();
+            new MainScreen();
 
             //=> Bloqueando a captura de tela
             BlockKeys.blockPrints();

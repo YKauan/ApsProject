@@ -68,28 +68,28 @@ public class Buttons {
 
     //=> Metodo responsavel por instanciar a minha tela start
     static public void startButton(ActionEvent e, JFrame thisScreen) {
-        StartScreen startScreen = new StartScreen(thisScreen);
+        new StartScreen(thisScreen);
         thisScreen.dispose();
     
     }
 
     //=> Metodo responsavel por instanciar a minha tela match
     static public void matchButton(ActionEvent e, JFrame thisScreen) {
-        MatchScreen matchScreen = new MatchScreen(thisScreen);
+        new MatchScreen(thisScreen);
         thisScreen.dispose();
 
     }
 
     //=> Metodo responsavel por instanciar a minha tela simulation
     static public void simulationButton(ActionEvent e, JFrame thisScreen) {
-        SimulationScreen simulationScreen = new SimulationScreen(thisScreen);
+        new SimulationScreen(thisScreen);
         thisScreen.dispose();
 
     }
 
     //=> Metodo responsavel por instanciar a minha tela ranking
     static public void rankingButton(ActionEvent e, JFrame thisScreen) {
-        RankingScreen rankingScreen = new RankingScreen(thisScreen);
+        new RankingScreen(thisScreen);
         thisScreen.dispose();
 
     }
