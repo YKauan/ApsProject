@@ -8,23 +8,33 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 
 public class BlockKeys implements KeyEventDispatcher {
+  
+  //=> Sobreescrevendo o metodo dispatchKeyEvent da interface KeyEventDispatcher
+  @Override
+  public boolean dispatchKeyEvent(KeyEvent e) {
+    System.out.println(e.getKeyCode());
+    if (e.getKeyCode() == KeyEvent.VK_PRINTSCREEN) {
 
-    @Override
-    public boolean dispatchKeyEvent(KeyEvent e) {
-      System.out.println(e.getKeyCode());
-      if (e.getKeyCode() == KeyEvent.VK_PRINTSCREEN) {
+      //=> Criando uma selecao de texto para ser adicionado a area de transferencia
+      String randomText = "Hoje nao Nelson!"; //=> Texto que sera copiado para a aerea de transferencia 
+      StringSelection stringSelection = new StringSelection(randomText); //=> Criando uma selecao de texto
 
-        String randomText = "Hoje nao Nelson!"; // gerando um texto aleatório de 20 caracteres
-        StringSelection stringSelection = new StringSelection(randomText); // criando uma seleção de texto
-        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard(); // obtendo a área de transferência do sistema
-        clipboard.setContents(stringSelection, null); // colocando a seleção na área de transferência
+      //=> Pegando a area de transferencia e colando o texto na mesma
+      Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+      clipboard.setContents(stringSelection, null);
 
-      }
-        return false;
     }
-    
-    public static void blockPrints() {
-      BlockKeys blockPrint = new BlockKeys();
-        KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(blockPrint);
-    }
+    return false;
+  }
+  
+  //=> Metodo responsavel por adicionar o dispatchKeyEvent ao KeyboardFocusManager
+  public static void blockPrints() {
+
+    //=> Instanciando a classe BlockKeys
+    BlockKeys blockPrint = new BlockKeys();
+
+    //=> Adicionando o meu dispatchKeyEvent ao KeyboardFocusManager
+    KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(blockPrint);
+
+  }
 }
