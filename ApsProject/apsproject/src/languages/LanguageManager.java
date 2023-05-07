@@ -36,7 +36,7 @@ public class LanguageManager {
 
     //=> Metodo responsaver por definir qual o idoma sera usado no programa, recebe nome do arquivo e localidade
     public void setLanguage(String messageFile, String languageCode) {
-        messages = ResourceBundle.getBundle("apsproject.src.languages." + messageFile, new Locale(languageCode));
+        messages = ResourceBundle.getBundle("apsproject.src.languages." + messageFile, Locale.of(languageCode));
     }
 
     //=> Metodo responsaver por atualizar os meus textos/strings, receber a chave e retorna a string com o texto traduzido

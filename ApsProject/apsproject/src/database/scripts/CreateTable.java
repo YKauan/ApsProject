@@ -13,9 +13,9 @@ public class CreateTable {
         sqlQuery += "CREATE TABLE RACE";
         sqlQuery += "(";
         sqlQuery += "  RC_TYPE CHAR(1),";
-        sqlQuery += "  RC_COD INT(6) ZEROFILL PRIMARY KEY AUTO_INCREMENT,";
+        sqlQuery += "  RC_COD VARCHAR(6) NOT NULL,";
         sqlQuery += "  RC_PLAYER VARCHAR(11),";
-        sqlQuery += "  RC_EQUIP VARCHAR(5),";
+        sqlQuery += "  RC_EQUIP VARCHAR(11),";
         sqlQuery += "  RC_LAP1 DECIMAL,";
         sqlQuery += "  RC_LAP2 DECIMAL,";
         sqlQuery += "  RC_TOTAL VARCHAR(15)";

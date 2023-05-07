@@ -12,7 +12,7 @@ public class BlockKeys implements KeyEventDispatcher {
   //=> Sobreescrevendo o metodo dispatchKeyEvent da interface KeyEventDispatcher
   @Override
   public boolean dispatchKeyEvent(KeyEvent e) {
-    System.out.println(e.getKeyCode());
+
     if (e.getKeyCode() == KeyEvent.VK_PRINTSCREEN) {
 
       //=> Criando uma selecao de texto para ser adicionado a area de transferencia

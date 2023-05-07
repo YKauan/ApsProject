@@ -85,7 +85,7 @@ public class HelpScreenRanking extends JPanel {
             //=> Criando os JButtons
             nextButton     = new JButton();
             previousButton = new JButton();
-            exitButton     = new JButton("X");
+            exitButton     = new JButton();
 
             //=> Criando os JRadioButton
             img0 = new JRadioButton();
