@@ -2,7 +2,7 @@ package apsproject.src.main;
 
 import javax.swing.SwingUtilities;
 
-import apsproject.src.methods.BlockKeys;
+import apsproject.src.methods.BlockingPrintScreen;
 import apsproject.src.screens.MainScreen;
 
 public class MainMethod {
@@ -15,7 +15,7 @@ public class MainMethod {
             new MainScreen();
 
             //=> Bloqueando a captura de tela
-            BlockKeys.blockPrints();
+            BlockingPrintScreen.addKeyEventDispatcherForTheSystem();
      
         });
 
